@@ -1,3 +1,11 @@
+:root {
+  --amarelo: #FFD166;
+  --azul-claro: #118AB2;
+  --azul-escuro: #073B4C;
+  --verde: #06D6A0;
+  --rosa: #EF476F;
+}
+
 * {
   margin: 0;
   padding: 0;
