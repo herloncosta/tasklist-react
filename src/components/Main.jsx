@@ -63,6 +63,18 @@ export class Main extends Component {
 		});
 	};
 
+	componentDidUpdate(prevProps, prevState) {
+		const { tarefas } = this.state;
+		if (tarefas === prevState.tarefas) return;
+		localStorage.setItem("tarefas", JSON.stringify(tarefas));
+	}
+
+	componentDidMount() {
+		const tarefas = JSON.parse(localStorage.getItem("tarefas"));
+		if (!tarefas) return;
+		this.setState({ tarefas });
+	}
+
 	render() {
 		const { novaTarefa, tarefas } = this.state;
 
